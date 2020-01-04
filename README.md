@@ -155,7 +155,7 @@ array([0.27415651, 0.26277874, 0.26718257, ..., 0.88094428, 0.87016019,
 
 ## LSTM Model
 
-For the final model, 60 epochs are used for training with one hidden layer, with a dropout rate of **0.05**. The **mean_squared_error** is used as the loss function.
+For the final model, **60** epochs are used for training with one hidden layer, with a dropout rate of **0.05**. The **mean_squared_error** is used as the loss function.
 
 ```
 In [21]:
