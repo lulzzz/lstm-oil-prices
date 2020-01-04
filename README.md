@@ -17,3 +17,6 @@ When analysing the time series, the first noticeable feature is that a strong up
 This is in contrast to a time series with a more stationary shape, such as the weekly hotel cancellation time series featured in one of my other articles.
 
 ![time-series-hotel](time-series-hotel.png)
+
+As a result, the former might prove to be a more difficult dataset to predict - given that a time series relies on stationarity (or a similar pattern across the training and test set) in order to make accurate forecasts.
+
