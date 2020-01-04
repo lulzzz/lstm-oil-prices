@@ -33,6 +33,8 @@ print('Critical Values:')
 for key, value in result[4].items():
     print('\t%s: %.3f' % (key, value))
 
+Out [9]:
+
 ADF Statistic: -1.954749
 p-value: 0.306759
 Critical Values:
@@ -60,8 +62,6 @@ def create_dataset(df, previous=1):
         dataX.append(a)
         dataY.append(df[i + previous, 0])
     return np.array(dataX), np.array(dataY)
-
-
 
 In [15]:
 
