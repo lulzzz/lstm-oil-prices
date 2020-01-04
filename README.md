@@ -8,3 +8,12 @@ However, that is not to say that models such as LSTM cannot be of some value in 
 
 In this regard, an LSTM model is built to forecast oil price fluctuations, with the dataset encompassing the time period May 1987 - September 2019. The [Brent Oil prices dataset](https://www.kaggle.com/mabusalah/brent-oil-prices/data) is sourced from Kaggle.
 
+## Time Series
+
+When analysing the time series, the first noticeable feature is that a strong upward trend is present in the data:
+
+![price](price.png)
+
+This is in contrast to a time series with a more stationary shape, such as the weekly hotel cancellation time series featured in one of my other articles.
+
+![time-series-hotel](time-series-hotel.png)
