@@ -23,15 +23,18 @@ As a result, the former might prove to be a more difficult dataset to predict - 
 To smooth out the volatility in the dataset, the natural log of the oil price is calculated.
 
 ```
->>> result = adfuller(tsdiff)
->>> print('ADF Statistic: %f' % result[0])
->>> print('p-value: %f' % result[1])
->>> print('Critical Values:')
->>> for key, value in result[4].items():
->>>     print('\t%s: %.3f' % (key, value))
+In [9]:
 
-ADF Statistic: -1.613410
-p-value: 0.476186
+from statsmodels.tsa.stattools import adfuller
+result = adfuller(tseries)
+print('ADF Statistic: %f' % result[0])
+print('p-value: %f' % result[1])
+print('Critical Values:')
+for key, value in result[4].items():
+    print('\t%s: %.3f' % (key, value))
+
+ADF Statistic: -1.954749
+p-value: 0.306759
 Critical Values:
 	1%: -3.431
 	5%: -2.862
@@ -41,3 +44,40 @@ Critical Values:
 As can be seen, the p-value for the Dickey-Fuller test is significantly above 0.05, which indicates that a unit root is present and therefore non-stationarity is likely to be present in the model.
 
 While the time series should ordinarily be transformed into a stationary one for forecasting, it is assumed for this purpose that the LSTM model will be more adept at [learning nonlinearities](https://datascience.stackexchange.com/questions/24800/time-series-prediction-using-lstms-importance-of-making-time-series-stationary) than a model such as ARIMA. In this regard, forecasts are made on the time series "as is".
+
+## Data Processing
+
+To process the time series, a dataset matrix is formed:
+
+```
+In [14]:
+
+# Form dataset matrix
+def create_dataset(df, previous=1):
+    dataX, dataY = [], []
+    for i in range(len(df)-previous-1):
+        a = df[i:(i+previous), 0]
+        dataX.append(a)
+        dataY.append(df[i + previous, 0])
+    return np.array(dataX), np.array(dataY)
+
+
+
+In [15]:
+
+df=np.array(df)
+
+In [16]:
+
+df
+
+Out[16]:
+
+array([[2.92477318],
+       [2.91506437],
+       [2.92046979],
+       ...,
+       [4.12842388],
+       [4.13484651],
+       [4.11070992]])
+```
