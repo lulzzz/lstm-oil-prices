@@ -37,3 +37,6 @@ Critical Values:
 	5%: -2.862
 	10%: -2.567
 ```
+
+As can be seen, the p-value for the Dickey-Fuller test is significantly above 0.05, which indicates that a unit root is present and therefore non-stationarity is likely to be present in the model.
+
