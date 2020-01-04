@@ -20,3 +20,20 @@ This is in contrast to a time series with a more stationary shape, such as the [
 
 As a result, the former might prove to be a more difficult dataset to predict - given that a time series relies on stationarity (or a similar pattern across the training and test set) in order to make accurate forecasts.
 
+To smooth out the volatility in the dataset, the natural log of the oil price is calculated.
+
+```
+>>> result = adfuller(tsdiff)
+>>> print('ADF Statistic: %f' % result[0])
+>>> print('p-value: %f' % result[1])
+>>> print('Critical Values:')
+>>> for key, value in result[4].items():
+>>>     print('\t%s: %.3f' % (key, value))
+
+ADF Statistic: -1.613410
+p-value: 0.476186
+Critical Values:
+	1%: -3.431
+	5%: -2.862
+	10%: -2.567
+```
