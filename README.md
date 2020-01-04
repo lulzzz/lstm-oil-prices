@@ -152,3 +152,37 @@ Out[20]:
 array([0.27415651, 0.26277874, 0.26718257, ..., 0.88094428, 0.87016019,
        0.8655946 ])
 ```
+
+## LSTM Model
+
+For the final model, 60 epochs are used for training with one hidden layer, with a dropout rate of **0.05**. The **mean_squared_error** is used as the loss function.
+
+```
+In [21]:
+
+from tensorflow.keras.layers import Dropout
+
+# reshape input to be [samples, time steps, features]
+X_train = np.reshape(X_train, (X_train.shape[0], 1, X_train.shape[1]))
+X_val = np.reshape(X_val, (X_val.shape[0], 1, X_val.shape[1]))
+
+# Generate LSTM network
+model = tf.keras.Sequential()
+model.add(LSTM(4, input_shape=(1, previous)))
+model.add(Dropout(0.05))
+model.add(Dense(1))
+model.compile(loss='mean_squared_error', optimizer='adam')
+history=model.fit(X_train, Y_train, validation_split=0.2, epochs=60, batch_size=1, verbose=2)
+
+# list all data in history
+print(history.history.keys())
+# summarize history for accuracy
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('model loss')
+plt.ylabel('loss')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.show()
+```
+
