@@ -81,3 +81,74 @@ array([[2.92477318],
        [4.13484651],
        [4.11070992]])
 ```
+
+Then, the dataset is normalized using **MinMaxScaler**:
+
+```
+In [17]:
+
+# normalize dataset with MinMaxScaler
+scaler = MinMaxScaler(feature_range=(0, 1))
+df = scaler.fit_transform(df)
+df
+
+Out[17]:
+
+array([[0.25948897],
+       [0.2559728 ],
+       [0.25793044],
+       ...,
+       [0.69540609],
+       [0.69773213],
+       [0.68899076]])
+```
+
+The training and validation datasets are then created. Using trial and error, **500** is set as the parameter for the **previous** variable, i.e. the number of previous time intervals that are used to predict the oil price at time *t*.
+
+```
+In [18]:
+
+import tensorflow as tf
+from tensorflow.keras import layers
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import LSTM
+
+# Training and Validation data partition
+train_size = int(len(df) * 0.8)
+val_size = len(df) - train_size
+train, val = df[0:train_size,:], df[train_size:len(df),:]
+
+# Number of previous
+previous = 500
+X_train, Y_train = create_dataset(train, previous)
+X_val, Y_val = create_dataset(val, previous)
+
+In [19]:
+
+X_train
+
+Out[19]:
+
+array([[0.25948897, 0.2559728 , 0.25793044, ..., 0.26945914, 0.26431659,
+        0.2797141 ],
+       [0.2559728 , 0.25793044, 0.25890531, ..., 0.26431659, 0.2797141 ,
+        0.27415651],
+       [0.25793044, 0.25890531, 0.25948897, ..., 0.2797141 , 0.27415651,
+        0.26277874],
+       ...,
+       [0.94306793, 0.94274392, 0.95262698, ..., 0.87933295, 0.88254847,
+        0.88504519],
+       [0.94274392, 0.95262698, 0.95308549, ..., 0.88254847, 0.88504519,
+        0.88094428],
+       [0.95262698, 0.95308549, 0.93808763, ..., 0.88504519, 0.88094428,
+        0.87016019]])
+
+In [20]:
+
+Y_train
+
+Out[20]:
+
+array([0.27415651, 0.26277874, 0.26718257, ..., 0.88094428, 0.87016019,
+       0.8655946 ])
+```
