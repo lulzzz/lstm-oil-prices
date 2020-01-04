@@ -187,3 +187,7 @@ plt.show()
 ```
 
 ![train-vs-val-60-epochs-dropout-005](train-vs-val-60-epochs-dropout-005.png)
+
+## Dropout
+
+When experimenting with 
