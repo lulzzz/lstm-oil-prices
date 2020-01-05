@@ -250,13 +250,13 @@ Here are the results.
 
 **Diagnostics**
 
-```
+
 | Reading      | Previous = 10 | Previous = 500 |
-| ----------- | ----------- |
+| ----------- | ----------- | ----------- |
 | MDA      | 0.8 | 0.8 |
 | RMSE   | 28.06 | 15.71 |
 | MFE   | -5.52 | 0.81 |
-```
+
 
 When using a 10-day window instead of a 500-day window, we see that the results perform less well on RMSE and MFE.
 
