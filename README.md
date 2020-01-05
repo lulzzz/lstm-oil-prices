@@ -202,6 +202,16 @@ The mean directional accuracy (MDA), root mean squared error (RMSE) and mean for
 
 Based on the validation set, the results without Dropout performed the best.
 
+Here are the predicted vs actual values for the training and validation sets:
+
+**Without Dropout**
+
+![predicted-vs-actual-no-dropout](predicted-vs-actual-no-dropout.png)
+
+**With Dropout = 0.05**
+
+![predicted-vs-actual-dropout](predicted-vs-actual-dropout.png)
+
 ## Test Set
 
 In order to assess whether the model holds predictive power against completely unseen data - in this case the last 10 observations in the time series, the model was run once again by predicting the oil price at time *t* using the *t-500* previous observations.
