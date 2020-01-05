@@ -224,3 +224,6 @@ Again, the model was run without Dropout and with Droput = 0.05, and here are th
 | RMSE   | 28.27        | 15.71       |
 | MFE   | 3.53        | 0.81        |
 
+In this instance, using Dropout = 0.05 yielded better results.
+
+Here is a plot of the predicted vs actual price. In both instances, we see that the predictions are significantly more volatile than the actual oil prices day-to-day - this is an indication that the model is inducing too much volatility into the predictions when using the 500-day period.
