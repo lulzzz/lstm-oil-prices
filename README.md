@@ -188,7 +188,7 @@ plt.show()
 
 ![model-loss-dropout](model-loss-dropout.png)
 
-When experimenting with LSTM, the model was initially run without dropout.
+When experimenting with LSTM, the model was initially run without Dropout.
 
 ![model-loss-no-dropout](model-loss-no-dropout.png)
 
