@@ -188,8 +188,9 @@ plt.show()
 
 ![model-loss-dropout](model-loss-dropout.png)
 
-### Loss without Dropout
-
 When experimenting with LSTM, the model was initially run without dropout.
 
 ![model-loss-no-dropout](model-loss-no-dropout.png)
+
+The mean directional accuracy (MDA), root mean squared error (RMSE) and mean forecast error (MFE) were computed when comparing the model predictions to the validation set.
+
