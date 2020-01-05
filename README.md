@@ -243,3 +243,11 @@ Here are the results.
 **Predicted vs. Actual: Test**
 
 ![predicted-vs-actual-test-10-days](predicted-vs-actual-test-10-days.png)
+
+**Diagnostics**
+
+| Reading      | Dropout = 0.05 |
+| ----------- | ----------- |
+| MDA      | 0.8       |
+| RMSE   | 28.27        |
+| MFE   | 3.53        |
