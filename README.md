@@ -215,3 +215,12 @@ Here are the predicted vs actual values for the training and validation sets:
 ## Test Set
 
 In order to assess whether the model holds predictive power against completely unseen data - in this case the last 10 observations in the time series, the model was run once again by predicting the oil price at time *t* using the *t-500* previous observations.
+
+Again, the model was run without Dropout and with Droput = 0.05, and here are the results:
+
+| Reading      | No Dropout | Dropout = 0.05 |
+| ----------- | ----------- | ----------- |
+| MDA      | 0.8       | 0.8       |
+| RMSE   | 28.27        | 15.71       |
+| MFE   | 3.53        | 0.81        |
+
