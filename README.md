@@ -246,8 +246,13 @@ Here are the results.
 
 **Diagnostics**
 
-| Reading      | Dropout = 0.05 |
+| Reading      | Previous = 10 | Previous = 500 |
 | ----------- | ----------- |
-| MDA      | 0.8       |
-| RMSE   | 28.27        |
-| MFE   | 3.53        |
+| MDA      | 0.8 | 0.8 |
+| RMSE   | 28.06 | 15.71 |
+| MFE   | -5.52 | 0.81 |
+
+When using a 10-day window instead of a 500-day window, we see that the results perform less well on RMSE and MFE.
+
+However, in both cases, the predictions appear to be quite volatile relative to the actual values - this is an indication that LSTM is not necessarily the most ideal model for predicting data with a clear trend. As a Sequential model, it is possible that LSTM simply carries too much volatility forward to the predictions, and in this regard LSTM is more adept at forecasting a series that has a more volatile nature.
+
