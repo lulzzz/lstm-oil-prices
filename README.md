@@ -1,3 +1,10 @@
+[Home](https://mgcodesandstats.github.io/) |
+[Portfolio](https://mgcodesandstats.github.io/portfolio/) |
+[Speaking Engagements](https://mgcodesandstats.github.io/speaking-engagements/) |
+[Terms and Conditions](https://mgcodesandstats.github.io/terms/) |
+[E-mail me](mailto:contact@michaeljgrogan.com) |
+[LinkedIn](https://www.linkedin.com/in/michaeljgrogan/)
+
 # Are LSTMs Always Effective At Time Series Analysis? A Case Study of Oil Prices
 
 There has been much speculation as to whether models such as LSTM can be used to forecast asset prices - in this example, oil.
