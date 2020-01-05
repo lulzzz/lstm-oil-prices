@@ -103,7 +103,7 @@ array([[0.25948897],
        [0.68899076]])
 ```
 
-The training and validation datasets are then created. Using trial and error, **500** is set as the parameter for the **previous** variable, i.e. the number of previous time intervals that are used to predict the oil price at time *t*.
+The training and validation datasets are then created. In order to capture longer-term dependencies, **500** is set as the parameter for the **previous** variable, i.e. the number of previous time intervals that are used to predict the oil price at time *t*.
 
 ```
 In [18]:
