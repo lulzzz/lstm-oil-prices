@@ -228,4 +228,18 @@ In this instance, using Dropout = 0.05 yielded better results.
 
 Here is a plot of the predicted vs actual price. In both instances, we see that the predictions are significantly more volatile than the actual oil prices day-to-day - this is an indication that the model is inducing too much volatility into the predictions when using the 500-day period.
 
-Therefore, it was chosen to use a 10-day period instead, using Dropout = 0.05.
+Therefore, it was chosen to use a 10-day period instead, using **Dropout = 0.05**.
+
+Here are the results.
+
+**Training vs. Validation Loss**
+
+![model-loss-10-days](model-loss-10-days.png)
+
+**Predicted vs. Actual: Training and Validation**
+
+![predicted-vs-actual-10-days](predicted-vs-actual-10-days.png)
+
+**Predicted vs. Actual: Test**
+
+![predicted-vs-actual-test-10-days](predicted-vs-actual-test-10-days.png)
