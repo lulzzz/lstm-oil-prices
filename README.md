@@ -186,7 +186,7 @@ plt.legend(['train', 'val'], loc='upper left')
 plt.show()
 ```
 
-![train-vs-val-60-epochs-dropout-005](train-vs-val-60-epochs-dropout-005.png)
+![predicted-vs-actual-dropout](predicted-vs-actual-dropout.png)
 
 ## Dropout
 
