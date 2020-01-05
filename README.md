@@ -1,4 +1,4 @@
-# Using LSTM Networks To Forecast Oil Prices
+# Are LSTMs Always Effective At Time Series Analysis? A Case Study of Oil Prices
 
 There has been much speculation as to whether models such as LSTM can be used to forecast asset prices - in this example, oil.
 
@@ -260,6 +260,12 @@ Here are the results.
 
 When using a 10-day window instead of a 500-day window, we see that the results perform less well on RMSE and MFE.
 
-However, in both cases, the predictions appear to be quite volatile relative to the actual values - this is an indication that LSTM is not necessarily the most ideal model for predicting data with a clear trend. As a Sequential model, it is possible that LSTM simply carries too much volatility forward to the predictions, and in this regard LSTM is more adept at forecasting a series that has a more volatile nature.
+However, in both cases, the predictions appear to be quite volatile relative to the actual values - this is an indication that LSTM is not necessarily the most ideal model for predicting data with a clear trend.
 
-e
+As a Sequential model, it is possible that LSTM simply carries too much volatility forward to the predictions, and in this regard LSTM is possibly more adept at forecasting a [series](https://www.michael-grogan.com/hotel-cancellations-lstm/) that has a more volatile nature.
+
+## Conclusion
+
+Using both the 10-day and 500-day window, the LSTM model was limited in being able to forecast oil prices - the main limitation being that LSTM tends to carry forward a high degree of volatility in predicting future values, and therefore may not be the best choice in modelling data with a strong trend.
+
+The "no free lunch theorem" applies here - a model may work well in forecasting one type of data, but that does not mean it should be used in all cases.
