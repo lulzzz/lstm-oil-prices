@@ -212,6 +212,10 @@ Here are the predicted vs actual values for the training and validation sets:
 
 ![predicted-vs-actual-dropout](predicted-vs-actual-dropout.png)
 
+**Predicted vs. Actual: Test (500 Days)**
+
+![predicted-vs-actual-test-500-days](predicted-vs-actual-test-500-days.png)
+
 ## Test Set
 
 In order to assess whether the model holds predictive power against completely unseen data - in this case the last 10 observations in the time series, the model was run once again by predicting the oil price at time *t* using the *t-500* previous observations.
@@ -240,7 +244,7 @@ Here are the results.
 
 ![predicted-vs-actual-10-days](predicted-vs-actual-10-days.png)
 
-**Predicted vs. Actual: Test**
+**Predicted vs. Actual: Test (10 Days)**
 
 ![predicted-vs-actual-test-10-days](predicted-vs-actual-test-10-days.png)
 
