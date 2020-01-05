@@ -186,7 +186,7 @@ plt.legend(['train', 'val'], loc='upper left')
 plt.show()
 ```
 
-![predicted-vs-actual-dropout](predicted-vs-actual-dropout.png)
+![model-loss-dropout](model-loss-dropout.png)
 
 ## Dropout
 
