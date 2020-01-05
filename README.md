@@ -197,5 +197,11 @@ The mean directional accuracy (MDA), root mean squared error (RMSE) and mean for
 | Reading      | No Dropout | Dropout = 0.05 |
 | ----------- | ----------- | ----------- |
 | MDA      | 0.99       | 0.99       |
-| RMSE   | 0.2487        | 0.2135       |
-| MFE   | -0.15        | 0.013        |
+| RMSE   | 0.2135        | 0.2487       |
+| MFE   | 0.013        | -0.15        |
+
+Based on the validation set, the results without Dropout performed the best.
+
+## Test Set
+
+In order to assess whether the model holds predictive power against completely unseen data - in this case the last 10 observations in the time series, the model was run once again by predicting the oil price at time *t* using the *t-500* previous observations.
