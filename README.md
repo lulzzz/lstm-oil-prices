@@ -194,3 +194,8 @@ When experimenting with LSTM, the model was initially run without dropout.
 
 The mean directional accuracy (MDA), root mean squared error (RMSE) and mean forecast error (MFE) were computed when comparing the model predictions to the validation set.
 
+| Reading      | No Dropout | Dropout = 0.05 |
+| ----------- | ----------- | ----------- |
+| MDA      | 0.99       | 0.99       |
+| RMSE   | 0.2487        | 0.2135       |
+| MFE   | -0.15        | 0.013        |
