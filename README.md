@@ -262,7 +262,7 @@ When using a 10-day window instead of a 500-day window, we see that the results 
 
 However, in both cases, the predictions appear to be quite volatile relative to the actual values - this is an indication that LSTM is not necessarily the most ideal model for predicting data with a clear trend.
 
-As a Sequential model, it is possible that LSTM simply carries too much volatility forward to the predictions, and in this regard LSTM is possibly more adept at forecasting a [series](https://www.michael-grogan.com/hotel-cancellations-lstm/) that has a more volatile nature.
+As a Sequential model, it is possible that LSTM simply carries too much volatility forward to the predictions, and in this regard LSTM is possibly more adept at forecasting a [series](https://www.michael-grogan.com/hotel-cancellations-lstm/) of a more volatile nature.
 
 ## Conclusion
 
